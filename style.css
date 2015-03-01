@@ -45,11 +45,11 @@ section.first .sub.title {
 }
 
 img.chat.arrow {
-    width: 17px;
-    height: 24px;
-    position: relative;
-    top: -4px;
-    left: 51px;
+  width: 17px;
+  height: 24px;
+  position: relative;
+  top: -4px;
+  left: 51px;
 }
 
 section.first .maybe.not, p.scroll.more {
