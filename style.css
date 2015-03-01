@@ -60,3 +60,10 @@ img.scroll.more {
   width: 12px;
   height: 37px;
 }
+
+
+/* second section */
+
+section.second {
+  background-color: #93bb4e;
+}
