@@ -6,14 +6,18 @@ body {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
+section {
+  height:100vh;
+}
+
 section.home {
   text-align: center;
   /*height: 100vh;*/
 }
 
-section.home header {
-  margin-top: 15%;
-  margin-top: calc(25% - 125px); /* 25% - half of the chat box height. */
+section.home article {
+  top: 25%;
+  position: relative;
 }
 
 section.home .title:not(.sub) {
@@ -57,16 +61,12 @@ img.chat.arrow {
 
 section.home .maybe.not, p.scroll.more {
   color: #3b4a65;
-  margin-top: 100px;
+  margin: 50px 0;
   font-weight: bold;
 }
 
-section.home footer {
-  margin-top: 220px;
-}
-
 section.home footer .scroll.more {
-  top: -105px;
+  top: -58px;
   min-width: 174px;
 }
 
@@ -89,7 +89,7 @@ section.home footer .scroll.more .icon {
 }
 
 section.home footer .vertical.line {
-  height: 268px;
+  height: 159px;
   width: 2px;
   background-color: #ededed;
   margin: 0 95px;
@@ -97,7 +97,7 @@ section.home footer .vertical.line {
 
 section.home footer .menu {
   position: relative;
-  top: -55px;
+  top: -17px;
   text-align: left;
 }
 
@@ -114,5 +114,27 @@ section.home footer .menu ul li {
 }
 
 section.introduction {
-  background-color: #93bb4e;
+  background-color: #e75174;
+  color: #fff;
+  font-family: 'Merriweather', serif;
+}
+
+section.introduction article {
+  top: 25%;
+  position: relative;
+}
+
+section.introduction p {
+  max-width: 630px;
+  margin: 0 auto;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+section.introduction p:first-child {
+  margin-top: 0;
+}
+
+section.testimonials {
+  background-color: #455c7b;
 }
