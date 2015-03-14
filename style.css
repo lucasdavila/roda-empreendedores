@@ -3,6 +3,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body {
   margin: 0;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 section.home {
@@ -10,19 +11,24 @@ section.home {
   /*height: 100vh;*/
 }
 
-section.jome header {
+section.home header {
   margin-top: 15%;
-  margin-top: calc(15% + 110px); /* 15% - half of the chat box height. */
+  margin-top: calc(25% - 125px); /* 25% - half of the chat box height. */
 }
 
-section.jome .title:not(.sub) {
+section.home .title:not(.sub) {
   color: #f17953;
   text-transform: uppercase;
   font-size: 37px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 section.home .sub.title {
   color: #3e4c68;
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: -30px;
 }
 
 .top.chat.box, .bottom.chat.box {
@@ -51,11 +57,60 @@ img.chat.arrow {
 
 section.home .maybe.not, p.scroll.more {
   color: #3b4a65;
+  margin-top: 100px;
+  font-weight: bold;
 }
 
-img.scroll.more {
+section.home footer {
+  margin-top: 220px;
+}
+
+section.home footer .scroll.more {
+  top: -105px;
+  min-width: 174px;
+}
+
+section.home footer .scroll.more, section.home footer .vertical.line, section.home footer .menu {
+  display: inline-block;
+}
+section.home footer .scroll.more, section.home footer .menu {
+  width: 25%;
+  position: relative;
+}
+
+section.home footer .scroll.more .text, section.home footer .menu {
+  color: #3b4a65;
+}
+
+section.home footer .scroll.more .icon {
   width: 12px;
   height: 37px;
+  float: right;
+}
+
+section.home footer .vertical.line {
+  height: 268px;
+  width: 2px;
+  background-color: #ededed;
+  margin: 0 95px;
+}
+
+section.home footer .menu {
+  position: relative;
+  top: -55px;
+  text-align: left;
+}
+
+section.home footer .menu .header {
+  font-weight: bold;
+  color: #9da4b2;
+}
+
+section.home footer .menu .header {
+  margin-bottom: 20px;
+}
+section.home footer .menu ul li {
+  margin-top: 10px;
 }
 
 section.introduction {
