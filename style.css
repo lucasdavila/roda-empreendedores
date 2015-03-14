@@ -5,26 +5,23 @@ body {
   margin: 0;
 }
 
-
-/* first section */
-
-section.first {
+section.home {
   text-align: center;
   /*height: 100vh;*/
 }
 
-section.first header {
+section.jome header {
   margin-top: 15%;
   margin-top: calc(15% + 110px); /* 15% - half of the chat box height. */
 }
 
-section.first .title:not(.sub) {
+section.jome .title:not(.sub) {
   color: #f17953;
   text-transform: uppercase;
   font-size: 37px;
 }
 
-section.first .sub.title {
+section.home .sub.title {
   color: #3e4c68;
 }
 
@@ -52,7 +49,7 @@ img.chat.arrow {
   left: 51px;
 }
 
-section.first .maybe.not, p.scroll.more {
+section.home .maybe.not, p.scroll.more {
   color: #3b4a65;
 }
 
@@ -61,9 +58,6 @@ img.scroll.more {
   height: 37px;
 }
 
-
-/* second section */
-
-section.second {
+section.introduction {
   background-color: #93bb4e;
 }
