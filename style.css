@@ -138,3 +138,21 @@ section.introduction p:first-child {
 section.testimonials {
   background-color: #455c7b;
 }
+
+section.testimonials article {
+  width: 680px;
+  margin: 0 auto;
+  position: relative;
+  top: 25%;
+}
+
+section.testimonials .testemonial {
+  color: #fccf65;
+  font-size: 25px;
+  font-family: 'Merriweather', serif;
+  max-width: 520px;
+}
+
+section.testimonials .testemonial .quotes {
+  color: #fff;
+}
