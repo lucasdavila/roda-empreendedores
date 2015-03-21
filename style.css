@@ -221,3 +221,53 @@ section.testimonials .right.arrow {
   height: 62px;
   right: 0;
 }
+
+section.informations {
+  background-color: #fccf65;
+}
+
+section.informations article {
+  top: 25%;
+  position: relative;
+}
+
+section.informations p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 25px;
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+section.informations p:first-child {
+  margin-top: 0;
+}
+
+section.informations article footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+img.cycles {
+  height: 130px;
+  width: 130px;
+}
+
+img.vilaj.logo {
+  width: 226px;
+  height: 72px;
+}
+
+
+/*section.informations article footer .place .vilaj.logo {
+  margin-left: 190px;
+  position: relative;
+}*/
+
+section.informations article footer .place {
+  font-size: 14px;
+  margin-left: 190px;
+  display: inline-block;
+  position: relative;
+  top: -37px;
+}
