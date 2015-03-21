@@ -273,3 +273,59 @@ section.informations article footer .place {
   position: relative;
   top: -37px;
 }
+
+section.submission {
+  background-color: #303237;
+  color: #fff;
+}
+
+section.submission article {
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+  top: 25%;
+}
+
+section.submission header {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+section.submission p {
+  line-height: 1.5;
+  font-family: 'Merriweather', serif;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+section.submission form input[type="text"], section.submission form input[type="submit"] {
+  padding: 0 40px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; /* don't overflow the parent's width */
+  height: 75px;
+  margin-bottom: 5px;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+section.submission form input[type="submit"] {
+  text-align: center;
+  background-color: #fec827;
+  opacity: 0.75;
+  padding: 29.5px 0px;
+  cursor: pointer;
+}
+
+section.submission form input[type="submit"]:hover {
+  opacity: 1;
+}
+
+section.submission form input[type="submit"].success {
+   background-color: #93bb4e;
+   opacity: 1;
+   color: #fff;
+}
