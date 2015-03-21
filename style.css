@@ -120,8 +120,10 @@ section.introduction {
 }
 
 section.introduction article {
-  top: 25%;
+  line-height: 1.5;
   position: relative;
+  top: 10%;
+  top: calc(50% - 270px); /* 50% - half of its height */
 }
 
 section.introduction p {
