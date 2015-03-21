@@ -144,6 +144,7 @@ section.testimonials article {
   margin: 0 auto;
   position: relative;
   top: 25%;
+  text-align: center;
 }
 
 section.testimonials .testemonial {
@@ -151,8 +152,72 @@ section.testimonials .testemonial {
   font-size: 25px;
   font-family: 'Merriweather', serif;
   max-width: 520px;
+  display: inline-block;
+  text-align: left;
+  line-height: 1.5;
+  max-height: 225px;
+  overflow: scroll;
+}
+
+section.testimonials .testemonial:hover {
+  cursor: all-scroll;
 }
 
 section.testimonials .testemonial .quotes {
   color: #fff;
+}
+
+.person {
+  color: #fff;
+  margin-top: 60px;
+}
+
+section.testimonials .person .avatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  height: 68px;
+}
+
+section.testimonials .person .info {
+  display: inline-block;
+  position: relative;
+  top: -18px;
+  left: 23px;
+}
+
+section.testimonials .person .info .name {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+section.testimonials .person .info .bio {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+section.testimonials .left.arrow, section.testimonials .right.arrow {
+  width: 21px;
+  display: inline-block;
+  top: 25%;
+  position: absolute;
+  cursor: pointer;
+}
+
+section.testimonials .left.arrow:hover, section.testimonials .right.arrow:hover {
+  opacity: 0.50;
+}
+
+section.testimonials .left.arrow {
+  background-image: url('images/left-arrow.png');
+  height: 61px;
+  left: 0;
+}
+
+section.testimonials .right.arrow {
+  background-image: url('images/right-arrow.png');
+  height: 62px;
+  right: 0;
 }
