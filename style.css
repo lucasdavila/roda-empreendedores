@@ -16,9 +16,21 @@ section.home {
 }
 
 section.home article {
-  top: 25%;
   position: relative;
+  height: 100%;
 }
+
+section.home article .middle {
+  position: relative;
+  top: calc(40% - 158px); /* 40% - half of the its height */
+}
+
+section.home footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 
 section.home .title:not(.sub) {
   color: #f17953;
@@ -93,6 +105,8 @@ section.home footer .vertical.line {
   width: 2px;
   background-color: #ededed;
   margin: 0 95px;
+  position: relative;
+  bottom: -7px;
 }
 
 section.home footer .menu {
