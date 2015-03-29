@@ -3,7 +3,8 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          keepalive: true
+          keepalive: true,
+          base: 'public'
         }
       }
     }
