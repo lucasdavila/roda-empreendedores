@@ -14,8 +14,8 @@ $(document).ready(function() {
 
     var button = submitButton();
 
-    button.addClass('disabled');
-    button.text('Enviando...');
+    button.attr('disabled', 'disabled').removeClass('success error');
+    button.val('Enviando...');
 
     $.post('http://emailapi.ieducativa.com.br/email_api.php', submitData(), 'json').done(successCallback).fail(errorCallback);
   }
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     var button = submitButton();
 
-    button.addClass('success').removeClass('disabled').removeClass('error');
+    button.addClass('success').removeAttr('disabled').removeClass('error');
     button.val('Email enviado!');
   }
 
@@ -60,7 +60,7 @@ $(document).ready(function() {
 
     if (console && console.log) { console.log(arguments); }
 
-    button.addClass('error').removeClass('disabled').removeClass('success');
+    button.addClass('error').removeAttr('disabled').removeClass('success');
     button.val(':( tente novamente!');
   }
 
