@@ -352,3 +352,9 @@ section.submission form input[type="submit"].success {
    opacity: 1;
    color: #fff;
 }
+
+section.submission form input[type="submit"].error {
+  background-color: #d95c5c;
+  opacity: 1;
+  color: #fff;
+}

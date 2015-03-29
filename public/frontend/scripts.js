@@ -4,8 +4,7 @@ $(document).ready(function() {
   setupTestimonials();
 
   function setupForm() {
-    var form = $('form'),
-        button = form.find('input[type=submit]');
+    var form = $('form');
 
     form.submit(submitCallback);
   }
@@ -13,13 +12,56 @@ $(document).ready(function() {
   function submitCallback(e) {
     e.preventDefault();
 
+    var button = submitButton();
+
     button.addClass('disabled');
     button.text('Enviando...');
+
+    $.post('http://emailapi.ieducativa.com.br/email_api.php', submitData(), 'json').done(successCallback).fail(errorCallback);
   }
 
-  function successCallback() {
-    button.addClass('success').removeClass('disabled');
-    button.text('Email enviado!');
+  function submitButton() {
+    return $('form').find('input[type=submit]');
+  }
+
+  function submitData() {
+    var form = $('form'),
+        nameInput = form.find('input[name=name]'),
+        emailInput = form.find('input[name=email]'),
+        name = nameInput.val(),
+        email = emailInput.val(),
+        subject = '[roda-empreendedores] ' + name + ' quer se juntar a roda :)',
+        message = 'Oi!\n\n' + name + ' quer se juntar a roda.\n\nemail: ' + email;
+
+    var data = {
+      'token': 'foo',
+      'to' : 'lucas@lucasdavi.la',
+      'subject' : subject,
+      'message' : message
+    };
+
+    return data;
+  }
+
+  function successCallback(data) {
+    if (! data || ! data.sent) {
+      errorCallback.apply(this, arguments);
+      return;
+    }
+
+    var button = submitButton();
+
+    button.addClass('success').removeClass('disabled').removeClass('error');
+    button.val('Email enviado!');
+  }
+
+  function errorCallback() {
+    var button = submitButton();
+
+    if (console && console.log) { console.log(arguments); }
+
+    button.addClass('error').removeClass('disabled').removeClass('success');
+    button.val(':( tente novamente!');
   }
 
   function setupTestimonials() {
