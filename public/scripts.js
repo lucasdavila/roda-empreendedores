@@ -27,21 +27,29 @@ $(document).ready(function() {
         nextArrow = $('.testimonials .right.arrow');
 
     nextArrow.on('click', showNextTestemonial);
+    previousArrow.on('click', showPreviousTestemonial);
   }
 
   function showNextTestemonial() {
+    showTestemonial(nextTestemonial());
+  }
+
+  function showPreviousTestemonial() {
+    showTestemonial(previousTestemonial());
+  }
+
+  function showTestemonial(newTestemonial) {
     var _currentTestemonial = currentTestemonial(),
-        _nextTestemonial = nextTestemonial(),
         currentPersonName = _currentTestemonial.attr('data-person-name'),
-        nextPersonName = _nextTestemonial.attr('data-person-name'),
+        newPersonName = newTestemonial.attr('data-person-name'),
         currentPerson = personByName(currentPersonName),
-        nextPerson = personByName(nextPersonName);
+        newPerson = personByName(newPersonName);
 
-        _currentTestemonial.addClass('hidden');
-        _nextTestemonial.removeClass('hidden');
+    _currentTestemonial.addClass('hidden');
+    newTestemonial.removeClass('hidden');
 
-        currentPerson.addClass('hidden');
-        nextPerson.removeClass('hidden');
+    currentPerson.addClass('hidden');
+    newPerson.removeClass('hidden');
   }
 
   function currentTestemonial() {
@@ -58,6 +66,18 @@ $(document).ready(function() {
     }
 
     return _nextTestemonial;
+  }
+
+  function previousTestemonial() {
+    var _currentTestemonial = currentTestemonial(),
+        _previousTestemonial = _currentTestemonial.prev();
+
+    if (_previousTestemonial.length === 0) {
+      var lastTestemonial = _currentTestemonial.parent().children().last();
+      _previousTestemonial = lastTestemonial;
+    }
+
+    return _previousTestemonial;
   }
 
   function personByName(name) {
