@@ -23,16 +23,22 @@
   //  - You may have the 25 port blocked if you get error like: Connection timed out with aspmx2.googlemail.com.
 
   function send() {
+    // server configs
     $from = 'foo@gmail.com';
+    $serverToken = 'foo';
+
     $to = $_REQUEST['to'];
     $subject = $_REQUEST['subject'];
     $message =  $_REQUEST['message'];
     $headers = 'From: ' . $from;
+    $token = $_REQUEST['token'];
 
     $errorMsg = '';
     $sent = false;
 
-    if (empty($to)) {
+    if ($token !== $serverToken) {
+      $errorMsg = "The 'token' param is empty or not match the server token";
+    } else if (empty($to)) {
       $errorMsg = "A 'to' param is required";
     } else if (empty($subject) && empty($message)) {
       $errorMsg = "A 'subject' or 'message' param is required";
