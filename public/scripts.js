@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   setupForm();
-  setupTestemonials();
+  setupTestimonials();
 
   function setupForm() {
     var form = $('form'),
@@ -22,62 +22,62 @@ $(document).ready(function() {
     button.text('Email enviado!');
   }
 
-  function setupTestemonials() {
+  function setupTestimonials() {
     var previousArrow = $('.testimonials .left.arrow'),
         nextArrow = $('.testimonials .right.arrow');
 
-    nextArrow.on('click', showNextTestemonial);
-    previousArrow.on('click', showPreviousTestemonial);
+    nextArrow.on('click', showNextTestimonial);
+    previousArrow.on('click', showPreviousTestimonial);
   }
 
-  function showNextTestemonial() {
-    showTestemonial(nextTestemonial());
+  function showNextTestimonial() {
+    showTestimonial(nextTestimonial());
   }
 
-  function showPreviousTestemonial() {
-    showTestemonial(previousTestemonial());
+  function showPreviousTestimonial() {
+    showTestimonial(previousTestimonial());
   }
 
-  function showTestemonial(newTestemonial) {
-    var _currentTestemonial = currentTestemonial(),
-        currentPersonName = _currentTestemonial.attr('data-person-name'),
-        newPersonName = newTestemonial.attr('data-person-name'),
+  function showTestimonial(newTestimonial) {
+    var _currentTestimonial = currentTestimonial(),
+        currentPersonName = _currentTestimonial.attr('data-person-name'),
+        newPersonName = newTestimonial.attr('data-person-name'),
         currentPerson = personByName(currentPersonName),
         newPerson = personByName(newPersonName);
 
-    _currentTestemonial.addClass('hidden');
-    newTestemonial.removeClass('hidden');
+    _currentTestimonial.addClass('hidden');
+    newTestimonial.removeClass('hidden');
 
     currentPerson.addClass('hidden');
     newPerson.removeClass('hidden');
   }
 
-  function currentTestemonial() {
-    return $('.testemonials .testemonial:not(.hidden)');
+  function currentTestimonial() {
+    return $('.testimonials .testimonial:not(.hidden)');
   }
 
-  function nextTestemonial() {
-    var _currentTestemonial = currentTestemonial(),
-        _nextTestemonial = _currentTestemonial.next();
+  function nextTestimonial() {
+    var _currentTestimonial = currentTestimonial(),
+        _nextTestimonial = _currentTestimonial.next();
 
-    if (_nextTestemonial.length === 0) {
-      var firstTestemonial = _currentTestemonial.parent().children().first();
-      _nextTestemonial = firstTestemonial;
+    if (_nextTestimonial.length === 0) {
+      var firstTestimonial = _currentTestimonial.parent().children().first();
+      _nextTestimonial = firstTestimonial;
     }
 
-    return _nextTestemonial;
+    return _nextTestimonial;
   }
 
-  function previousTestemonial() {
-    var _currentTestemonial = currentTestemonial(),
-        _previousTestemonial = _currentTestemonial.prev();
+  function previousTestimonial() {
+    var _currentTestimonial = currentTestimonial(),
+        _previousTestimonial = _currentTestimonial.prev();
 
-    if (_previousTestemonial.length === 0) {
-      var lastTestemonial = _currentTestemonial.parent().children().last();
-      _previousTestemonial = lastTestemonial;
+    if (_previousTestimonial.length === 0) {
+      var lastTestimonial = _currentTestimonial.parent().children().last();
+      _previousTestimonial = lastTestimonial;
     }
 
-    return _previousTestemonial;
+    return _previousTestimonial;
   }
 
   function personByName(name) {

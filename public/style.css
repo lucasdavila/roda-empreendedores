@@ -166,7 +166,7 @@ section.testimonials article {
   text-align: center;
 }
 
-section.testimonials .testemonial {
+section.testimonials .testimonial {
   color: #fccf65;
   font-size: 25px;
   font-family: 'Merriweather', serif;
@@ -178,11 +178,11 @@ section.testimonials .testemonial {
   overflow: scroll;
 }
 
-section.testimonials .testemonial:hover {
+section.testimonials .testimonial:hover {
   cursor: all-scroll;
 }
 
-section.testimonials .testemonial .quotes {
+section.testimonials .testimonial .quotes {
   color: #fff;
 }
 
