@@ -1,4 +1,7 @@
 <?php
+  header("Access-Control-Allow-Origin: http://lucasdavila.github.io");
+  // header("Access-Control-Allow-Origin: foo.com.br");
+
   // email API
   //
   // It uses the php's native mail function http://php.net/manual/en/function.mail.php
