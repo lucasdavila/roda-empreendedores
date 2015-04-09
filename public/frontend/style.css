@@ -128,39 +128,6 @@ section.home footer .scroll.more .icon {
   float: right;
 }
 
-section.home footer .vertical.line {
-  height: 159px;
-  width: 2px;
-  background-color: #ededed;
-  margin: 0 95px;
-  position: relative;
-  bottom: -7px;
-}
-
-section.home footer .menu {
-  position: relative;
-  top: -17px;
-  text-align: left;
-}
-
-section.home footer .menu .header {
-  font-weight: bold;
-  color: #9da4b2;
-}
-
-section.home footer .menu .header {
-  margin-bottom: 20px;
-}
-
-section.home footer .menu ul li {
-  margin-top: 10px;
-}
-
-section.home footer .menu a {
-  color: inherit;
-  text-decoration: none;
-}
-
 section.introduction {
   background-color: #e75174;
   color: #fff;
