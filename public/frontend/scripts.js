@@ -66,10 +66,12 @@ $(document).ready(function() {
 
   function setupTestimonials() {
     var previousArrow = $('.testimonials .left.arrow'),
-        nextArrow = $('.testimonials .right.arrow');
+        nextArrow = $('.testimonials .right.arrow'),
+        dot = $('.dots .dot');
 
     nextArrow.on('click', showNextTestimonial);
     previousArrow.on('click', showPreviousTestimonial);
+    dot.on('click', showTextimonialByDataName);
   }
 
   function showNextTestimonial() {
@@ -85,13 +87,17 @@ $(document).ready(function() {
         currentPersonName = _currentTestimonial.attr('data-person-name'),
         newPersonName = newTestimonial.attr('data-person-name'),
         currentPerson = personByName(currentPersonName),
-        newPerson = personByName(newPersonName);
+        newPerson = personByName(newPersonName),
+        newDot = $('.dots .dot[data-name=' + newPersonName + ']');
 
     _currentTestimonial.addClass('hidden');
     newTestimonial.removeClass('hidden');
 
     currentPerson.addClass('hidden');
     newPerson.removeClass('hidden');
+
+    newDot.addClass('current');
+    newDot.siblings().removeClass('current');
   }
 
   function currentTestimonial() {
@@ -124,5 +130,13 @@ $(document).ready(function() {
 
   function personByName(name) {
     return $('.testimonials .people .person[data-name=' + name + ']');
+  }
+
+  function showTextimonialByDataName(e) {
+    var element = $(e.currentTarget),
+        personName = element.attr('data-name'),
+        newTestimonial = $('.testimonials .testimonial[data-person-name=' + personName + ']');
+
+        showTestimonial(newTestimonial);
   }
 });

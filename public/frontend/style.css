@@ -276,6 +276,19 @@ section.testimonials .right.arrow {
   right: 0;
 }
 
+section.testimonials .dots .dot {
+  height: 9px;
+  width: 9px;
+  background-color: #3c3c3c;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+section.testimonials .dots .dot.current {
+  background-color: #a2aebd;
+}
+
 section.informations {
   background-color: #fccf65;
   font-family: 'Merriweather', serif;
