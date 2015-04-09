@@ -10,8 +10,33 @@ body {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
+.left.fixed.logo {
+  position: fixed;
+  background-color: #fff;
+  width: 35%;
+  height: 150%;
+  transform: rotate(7deg);
+  left: -62px;
+  top: -50px;
+  z-index: 1;
+}
+
+.left.fixed.logo .heart.logo {
+  width: 175px;
+  height: 45px;
+  position: relative;
+  top: 25%;
+  left: 45%;
+  transform: rotate(-7deg);
+}
+
 section {
   height:100vh;
+}
+
+.push.right {
+  width: calc(100% - 40%);
+  margin-left: 40%;
 }
 
 section.home {
@@ -162,6 +187,10 @@ section.introduction p:first-child {
 
 section.testimonials {
   background-color: #455c7b;
+}
+
+section.testimonials .push.right {
+  height: 100vh;
 }
 
 section.testimonials article {
