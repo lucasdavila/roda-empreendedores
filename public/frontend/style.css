@@ -340,9 +340,19 @@ section.informations article footer .place {
   top: -37px;
 }
 
+.hands.background {
+  background-image: url('images/hands.jpg');
+  opacity: 0.1;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 section.submission {
   background-color: #303237;
   color: #fff;
+  position: relative;
 }
 
 section.submission article {
