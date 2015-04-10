@@ -19,6 +19,7 @@ body {
   left: -62px;
   top: -50px;
   z-index: 1;
+  box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, .5);
 }
 
 .left.fixed.logo .heart.logo {
