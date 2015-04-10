@@ -378,3 +378,22 @@ section.submission form input[type="submit"].error {
   opacity: 1;
   color: #fff;
 }
+
+section.entrepreneurship {
+  z-index: 1;
+  position: relative;
+  background-color: #fff;
+}
+
+section.entrepreneurship article {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  top: calc(50% - 30px);
+  font-weight: bold;
+  color: #f17953;
+}
+
+section.entrepreneurship .bottom.chat.box {
+  height: 14px;
+}
