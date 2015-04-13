@@ -342,7 +342,8 @@ section.submission article {
   max-width: 520px;
   margin: 0 auto;
   position: relative;
-  top: 25%;
+  top: 98px;
+  top: calc(50% - 252.5px);
 }
 
 section.submission header {
