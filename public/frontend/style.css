@@ -347,6 +347,10 @@ section.submission p {
   margin-bottom: 30px;
 }
 
+section.submission form {
+  max-width: 416px;
+}
+
 section.submission form input[type="text"], section.submission form input[type="submit"] {
   padding: 0 40px;
   width: 100%;
