@@ -112,6 +112,7 @@ img.chat.arrow {
   position: relative;
   top: -4px;
   left: 51px;
+  background-color: #fff;
 }
 
 section.home .maybe.not, p.scroll.more {
@@ -401,9 +402,8 @@ section.submission form input[type="submit"].error {
 }
 
 section.entrepreneurship {
-  z-index: 1;
   position: relative;
-  background-color: #fff;
+  background-color: #f4f4f4;
 }
 
 section.entrepreneurship article {
@@ -417,4 +417,9 @@ section.entrepreneurship article {
 
 section.entrepreneurship .bottom.chat.box {
   height: 14px;
+}
+
+section.entrepreneurship img.chat.arrow {
+  background-color: #f4f4f4;
+  left: -21px;
 }
