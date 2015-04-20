@@ -78,7 +78,7 @@ section.home footer {
 section.home .title:not(.sub) {
   color: #f17953;
   text-transform: uppercase;
-  font-size: 37px;
+  font-size: 30px;
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -157,9 +157,9 @@ section.introduction article {
 }
 
 section.introduction p {
-  max-width: 630px;
+  max-width: 475px;
   margin: 0 auto;
-  font-size: 25px;
+  font-size: 18px;
   margin-top: 30px;
 }
 
@@ -186,9 +186,9 @@ section.testimonials article {
 
 section.testimonials .testimonial {
   color: #fccf65;
-  font-size: 25px;
+  font-size: 18px;
   font-family: 'Merriweather', serif;
-  max-width: 520px;
+  max-width: 475px;
   display: inline-block;
   text-align: left;
   line-height: 1.5;
@@ -226,7 +226,7 @@ section.testimonials .person .info {
 
 section.testimonials .person .info .name {
   font-weight: bold;
-  font-size: 17px;
+  font-size: 10px;
 }
 
 section.testimonials .person .info .bio {
@@ -283,9 +283,9 @@ section.informations article {
 }
 
 section.informations p {
-  max-width: 600px;
+  max-width: 475px;
   margin: 0 auto;
-  font-size: 25px;
+  font-size: 18px;
   margin-top: 30px;
   line-height: 1.5;
 }
@@ -300,13 +300,13 @@ section.informations article footer {
 }
 
 img.cycles {
-  height: 130px;
-  width: 130px;
+  height: 100px;
+  width: 100px;
 }
 
 img.vilaj.logo {
-  width: 226px;
-  height: 72px;
+  width: 196px;
+  height: 62px;
 }
 
 
@@ -316,8 +316,8 @@ img.vilaj.logo {
 }*/
 
 section.informations article footer .place {
-  font-size: 14px;
-  margin-left: 190px;
+  font-size: 10px;
+  margin-left: 170px;
   display: inline-block;
   position: relative;
   top: -37px;
@@ -348,13 +348,13 @@ section.submission article {
 
 section.submission header {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 33px;
 }
 
 section.submission p {
   line-height: 1.5;
   font-family: 'Merriweather', serif;
-  font-size: 25px;
+  font-size: 18px;
   margin-top: 10px;
   margin-bottom: 30px;
 }
