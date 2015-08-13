@@ -28,10 +28,12 @@ $(document).ready(function() {
     var form = $('form'),
         nameInput = form.find('input[name=name]'),
         emailInput = form.find('input[name=email]'),
+        phoneInput = form.find('input[name=phone]'),
         name = nameInput.val(),
         email = emailInput.val(),
+        phone = ohoneInput.val(),
         subject = '[roda-empreendedores] ' + name + ' quer se juntar a roda :)',
-        message = 'Oi!\n\n' + name + ' quer se juntar a roda.\n\nemail: ' + email;
+        message = 'Oi!\n\n' + name + ' quer se juntar a roda.\n\nemail: ' + email + '\n\ntelefone: ' + phone;
 
     var data = {
       'token': 'foo',
