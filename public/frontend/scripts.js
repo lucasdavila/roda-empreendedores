@@ -1,7 +1,9 @@
 $(document).ready(function() {
+  var lastScrollTop, preventDefaultScroll;
 
   setupForm();
   setupTestimonials();
+  setupScroll();
 
   function setupForm() {
     var form = $('form');
@@ -140,5 +142,73 @@ $(document).ready(function() {
         newTestimonial = $('.testimonials .testimonial[data-person-name=' + personName + ']');
 
         showTestimonial(newTestimonial);
+  }
+
+  function setupScroll() {
+    lastScrollTop = 0;
+    preventDefaultScroll = false;
+
+    $(window).scroll(onScroll);
+  }
+
+  function onScroll(e) {
+    if (preventDefaultScroll) {
+      e.preventDefault();
+      return;
+    }
+
+    var currentScrollTop = $(window).scrollTop();
+    if (currentScrollTop > lastScrollTop){
+       scrollToNextSection();
+    } else {
+      scrollToPreviousSection();
+    }
+  }
+
+  function scrollToPreviousSection() {
+    _scrollTo(previousSection());
+  }
+
+  function scrollToNextSection() {
+    _scrollTo(nextSection());
+  }
+
+  function previousSection() {
+    var _currentSection = currentSection();
+    return _currentSection.prev();
+  }
+
+  function nextSection() {
+    var _currentSection = currentSection();
+    return _currentSection.next();
+  }
+
+  function currentSection() {
+    return $('section.current');
+  }
+
+  function _scrollTo(section) {
+    if (section.length === 0) {
+      preventDefaultScroll = false;
+      return;
+    }
+
+    preventDefaultScroll = true;
+
+    var callback = function() { afterScrollTo(section); };
+
+    $('html,body').animate({
+      scrollTop: section.offset().top
+    }, 500, callback);
+  }
+
+  function afterScrollTo(section) {
+    section.siblings().removeClass('current');
+    section.addClass('current');
+
+    window.setTimeout(function() {
+      lastScrollTop = $(window).scrollTop();
+      preventDefaultScroll = false;
+    }, 500);
   }
 });
