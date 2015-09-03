@@ -332,6 +332,7 @@ section.informations p {
 
 section.informations p:first-child {
   margin-top: 0;
+  margin-bottom: 30px;
 }
 
 section.informations p.small {
